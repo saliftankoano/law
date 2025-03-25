@@ -5,7 +5,7 @@ export function BlogSection() {
   return (
     <section className="px-16 py-16 bg-stone-100">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-4">Our Blog</h2>
+        <h2 className="text-black text-4xl font-bold mb-4">Our Blog</h2>
         <p className="text-gray-700 mb-8 max-w-2xl">
           Stay updated with key legal trends and expert insights from our
           attorneys. Explore articles on criminal defense, civil litigation, and
@@ -26,10 +26,10 @@ export function BlogSection() {
           <div className="rounded-lg overflow-hidden bg-black">
             <div className="relative h-[400px]">
               <Image
-                src="/placeholder.svg?height=400&width=1000"
+                src="/blog-gavel.jpg"
                 alt="Supreme Court"
                 fill
-                className="object-cover"
+                className="object-cover object-bottom"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 text-white">
@@ -58,14 +58,14 @@ export function BlogSection() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
               <div className="col-span-1">
                 <Image
-                  src="/placeholder.svg?height=200&width=300"
+                  src="/litigate.jpg"
                   alt="Healthcare Fraud"
                   width={300}
                   height={200}
                   className="rounded-lg object-cover w-full"
                 />
               </div>
-              <div className="col-span-2">
+              <div className="text-black col-span-2">
                 <div className="text-sm text-gray-500 mb-2">
                   08 December 2024 • Read Time: 9 min
                 </div>
@@ -92,14 +92,14 @@ export function BlogSection() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
               <div className="col-span-1">
                 <Image
-                  src="/placeholder.svg?height=200&width=300"
+                  src="/blog-daca.jpg"
                   alt="DACA"
                   width={300}
                   height={200}
                   className="rounded-lg object-cover w-full"
                 />
               </div>
-              <div className="col-span-2">
+              <div className="text-black col-span-2">
                 <div className="text-sm text-gray-500 mb-2">
                   09 December 2024 • Read Time: 7 min
                 </div>
