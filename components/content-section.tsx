@@ -1,16 +1,19 @@
-import Image from "next/image"
-import Link from "next/link"
-import { ServiceCards } from "@/components/service-cards"
+import Image from "next/image";
+import Link from "next/link";
+import { ServiceCards } from "@/components/service-cards";
 
 export function ContentSection() {
   return (
     <section className="px-16 py-16 bg-stone-100">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
         <div>
-          <h2 className="text-3xl font-bold text-black mb-6">Protecting Rights with Integrity and Expertise</h2>
+          <h2 className="text-3xl font-bold text-black mb-6">
+            Protecting Rights with Integrity and Expertise
+          </h2>
           <p className="text-gray-700 mb-6">
-            Lawvare delivers trusted legal solutions with integrity and excellence. We empower clients by safeguarding
-            their rights and providing expert guidance.
+            Lawvare delivers trusted legal solutions with integrity and
+            excellence. We empower clients by safeguarding their rights and
+            providing expert guidance.
           </p>
           <Link
             href="#"
@@ -18,11 +21,12 @@ export function ContentSection() {
           >
             Learn More
           </Link>
+          <ServiceCards />
         </div>
         <div className="relative">
           <div className="aspect-[4/3] relative">
             <Image
-              src="/placeholder.svg?height=400&width=500"
+              src="/protect.jpg"
               alt="Legal Professionals"
               fill
               className="object-cover rounded-md"
@@ -41,7 +45,7 @@ export function ContentSection() {
             </div>
           </div>
 
-          <div className="mt-8">
+          <div className="mt-8 text-black">
             <div className="mb-4">
               <div className="flex justify-between mb-1">
                 <span className="font-medium">Corporate Law Specialist</span>
@@ -74,10 +78,6 @@ export function ContentSection() {
           </div>
         </div>
       </div>
-
-      {/* Service Cards */}
-      <ServiceCards />
     </section>
-  )
+  );
 }
-
