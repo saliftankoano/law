@@ -7,33 +7,49 @@ import { TestimonialsSection } from "@/components/testimonials-section";
 import { ExpertiseSection } from "@/components/expertise-section";
 import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
+import { AnimateOnScroll } from "@/components/animate-on-scroll";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-stone-200">
       {/* Hero Container */}
-      <div className="relative h-screen">
+      <div
+        className="relative h-screen opacity-0 animate-fade-in hero-container"
+        style={{ animationDelay: "50ms", animationFillMode: "forwards" }}
+      >
         <Header />
         <HeroSection />
       </div>
 
       {/* Content Section */}
-      <ContentSection />
+      <AnimateOnScroll>
+        <ContentSection />
+      </AnimateOnScroll>
 
       {/* Features Section */}
-      <FeaturesSection />
+      <AnimateOnScroll>
+        <FeaturesSection />
+      </AnimateOnScroll>
 
       {/* Blog Section */}
-      <BlogSection />
+      <AnimateOnScroll>
+        <BlogSection />
+      </AnimateOnScroll>
 
       {/* Testimonials Section */}
-      <TestimonialsSection />
+      <AnimateOnScroll>
+        <TestimonialsSection />
+      </AnimateOnScroll>
 
       {/* Our Expertise Section */}
-      <ExpertiseSection />
+      <AnimateOnScroll>
+        <ExpertiseSection />
+      </AnimateOnScroll>
 
       {/* CTA Section */}
-      <CTASection />
+      <AnimateOnScroll>
+        <CTASection />
+      </AnimateOnScroll>
 
       {/* Footer */}
       <Footer />
