@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { cn } from "@/lib/utils";
 
 interface StaggeredAnimationProps {
@@ -11,6 +11,9 @@ interface StaggeredAnimationProps {
   direction?: "up" | "down" | "left" | "right" | "fade";
   initialOpacity?: number;
   distance?: number;
+  threshold?: number;
+  rootMargin?: string;
+  preserveLayout?: boolean;
 }
 
 export function StaggeredAnimation({
@@ -21,19 +24,41 @@ export function StaggeredAnimation({
   direction = "up",
   initialOpacity = 0,
   distance = 12,
+  threshold = 0.1,
+  rootMargin = "0px 0px -50px 0px",
+  preserveLayout = false,
 }: StaggeredAnimationProps) {
   const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, delay);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold,
+        rootMargin,
+      }
+    );
 
-    return () => clearTimeout(timer);
-  }, [delay]);
+    const currentContainer = containerRef.current;
 
-  // Convert children to an array
-  const childrenArray = React.Children.toArray(children);
+    if (currentContainer) {
+      observer.observe(currentContainer);
+    }
+
+    return () => {
+      if (currentContainer) {
+        observer.unobserve(currentContainer);
+      }
+    };
+  }, [threshold, rootMargin]);
 
   // Get direction styles
   const getTransform = () => {
@@ -53,22 +78,46 @@ export function StaggeredAnimation({
     }
   };
 
+  // If preserveLayout is true, render children directly in the container
+  // and apply styles to the container itself
+  if (preserveLayout) {
+    return (
+      <div
+        ref={containerRef}
+        className={cn(className)}
+        style={{
+          opacity: isVisible ? 1 : initialOpacity,
+          transform: isVisible ? "none" : getTransform(),
+          transition: `opacity 800ms cubic-bezier(0.22, 1, 0.36, 1), transform 800ms cubic-bezier(0.22, 1, 0.36, 1)`,
+          transitionDelay: `${isVisible ? delay : 0}ms`,
+        }}
+      >
+        {children}
+      </div>
+    );
+  }
+
+  // Convert children to an array
+  const childrenArray = React.Children.toArray(children);
+
+  // Normal staggered animation with each child wrapped individually
   return (
-    <>
+    <div ref={containerRef} className={cn("min-h-[10px]", className)}>
       {childrenArray.map((child, index) => (
         <div
           key={index}
-          className={cn(className)}
           style={{
             opacity: isVisible ? 1 : initialOpacity,
             transform: isVisible ? "none" : getTransform(),
             transition: `opacity 800ms cubic-bezier(0.22, 1, 0.36, 1), transform 800ms cubic-bezier(0.22, 1, 0.36, 1)`,
-            transitionDelay: `${delay + index * staggerDelay}ms`,
+            transitionDelay: `${
+              isVisible ? delay + index * staggerDelay : 0
+            }ms`,
           }}
         >
           {child}
         </div>
       ))}
-    </>
+    </div>
   );
 }

@@ -77,12 +77,30 @@ const config = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "progress-90": {
+          "0%": { width: "0%" },
+          "100%": { width: "90%" },
+        },
+        "progress-80": {
+          "0%": { width: "0%" },
+          "100%": { width: "80%" },
+        },
+        "progress-75": {
+          "0%": { width: "0%" },
+          "100%": { width: "75%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         in: "animate-in 0.7s ease-out forwards",
         "fade-in": "fade-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+        "progress-90":
+          "progress-90 1.5s cubic-bezier(0.26, 0.86, 0.44, 0.98) 0.3s forwards",
+        "progress-80":
+          "progress-80 1.5s cubic-bezier(0.26, 0.86, 0.44, 0.98) 0.5s forwards",
+        "progress-75":
+          "progress-75 1.5s cubic-bezier(0.26, 0.86, 0.44, 0.98) 0.7s forwards",
       },
     },
   },

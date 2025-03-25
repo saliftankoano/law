@@ -6,9 +6,20 @@ import { cn } from "@/lib/utils";
 interface AnimateOnScrollProps {
   children: React.ReactNode;
   className?: string;
+  direction?: "up" | "down" | "left" | "right" | "fade";
+  distance?: number;
+  threshold?: number;
+  rootMargin?: string;
 }
 
-export function AnimateOnScroll({ children, className }: AnimateOnScrollProps) {
+export function AnimateOnScroll({
+  children,
+  className,
+  direction = "up",
+  distance = 20,
+  threshold = 0.1,
+  rootMargin = "0px 0px -50px 0px",
+}: AnimateOnScrollProps) {
   const elementRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -24,8 +35,8 @@ export function AnimateOnScroll({ children, className }: AnimateOnScrollProps) {
         });
       },
       {
-        threshold: 0.1,
-        rootMargin: "50px",
+        threshold,
+        rootMargin,
       }
     );
 
@@ -38,16 +49,35 @@ export function AnimateOnScroll({ children, className }: AnimateOnScrollProps) {
         observer.unobserve(element);
       }
     };
-  }, []);
+  }, [threshold, rootMargin]);
+
+  // Get direction styles
+  const getTransform = () => {
+    switch (direction) {
+      case "up":
+        return `translateY(${distance}px)`;
+      case "down":
+        return `translateY(-${distance}px)`;
+      case "left":
+        return `translateX(${distance}px)`;
+      case "right":
+        return `translateX(-${distance}px)`;
+      case "fade":
+        return "none";
+      default:
+        return "none";
+    }
+  };
 
   return (
     <div
       ref={elementRef}
-      className={cn(
-        "opacity-0 scale-95 transition-all duration-700 ease-out",
-        isVisible && "opacity-100 scale-100",
-        className
-      )}
+      className={cn(className)}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "none" : getTransform(),
+        transition: `opacity 800ms cubic-bezier(0.22, 1, 0.36, 1), transform 800ms cubic-bezier(0.22, 1, 0.36, 1)`,
+      }}
     >
       {children}
     </div>
