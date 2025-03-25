@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function FeaturesSection() {
   return (
-    <section className="px-16 py-12 bg-stone-100">
+    <section className="px-16 py-6 bg-stone-100">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="space-y-8">
           <div className="flex items-start gap-4">
@@ -15,7 +15,7 @@ export function FeaturesSection() {
                 className="w-6 h-6"
               />
             </div>
-            <div>
+            <div className="text-black">
               <h3 className="text-xl font-bold mb-2">Proven Track Record</h3>
               <p className="text-gray-700">
                 Our history of successful cases demonstrates our expertise and
@@ -34,7 +34,7 @@ export function FeaturesSection() {
                 className="w-6 h-6"
               />
             </div>
-            <div>
+            <div className="text-black">
               <h3 className="text-xl font-bold mb-2">
                 24/7 Support Availability
               </h3>
@@ -50,9 +50,9 @@ export function FeaturesSection() {
           <Image
             src="/lady-justice.png"
             alt="Lady Justice Statue"
-            width={300}
-            height={400}
-            className="object-contain"
+            width={600}
+            height={900}
+            className="object-cover"
           />
         </div>
       </div>
