@@ -14,6 +14,7 @@ interface StaggeredAnimationProps {
   threshold?: number;
   rootMargin?: string;
   preserveLayout?: boolean;
+  gridLayout?: boolean;
 }
 
 export function StaggeredAnimation({
@@ -27,6 +28,7 @@ export function StaggeredAnimation({
   threshold = 0.1,
   rootMargin = "0px 0px -50px 0px",
   preserveLayout = false,
+  gridLayout = false,
 }: StaggeredAnimationProps) {
   const [isVisible, setIsVisible] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -93,6 +95,39 @@ export function StaggeredAnimation({
         }}
       >
         {children}
+      </div>
+    );
+  }
+
+  // For grid layouts where we need to preserve the grid but animate each child
+  if (gridLayout) {
+    // Convert children to an array to map over them
+    const childrenArray = React.Children.toArray(children);
+
+    return (
+      <div ref={containerRef} className={cn(className)}>
+        {childrenArray.map((child, index) => {
+          if (!React.isValidElement(child)) return child;
+
+          // Type-safe props with the correct interface
+          const childElement = child as React.ReactElement<{
+            style?: React.CSSProperties;
+          }>;
+          const childStyle = childElement.props.style || {};
+
+          return React.cloneElement(childElement, {
+            key: childElement.key || index,
+            style: {
+              ...childStyle,
+              opacity: isVisible ? 1 : initialOpacity,
+              transform: isVisible ? "none" : getTransform(),
+              transition: `opacity 800ms cubic-bezier(0.22, 1, 0.36, 1), transform 800ms cubic-bezier(0.22, 1, 0.36, 1)`,
+              transitionDelay: `${
+                isVisible ? delay + index * staggerDelay : 0
+              }ms`,
+            },
+          });
+        })}
       </div>
     );
   }
