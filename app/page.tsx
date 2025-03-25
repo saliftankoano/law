@@ -5,7 +5,6 @@ import { FeaturesSection } from "@/components/features-section";
 import { BlogSection } from "@/components/blog-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
 import { ExpertiseSection } from "@/components/expertise-section";
-import { CorporateExcellence } from "@/components/corporate-excellence";
 import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 
@@ -32,9 +31,6 @@ export default function Home() {
 
       {/* Our Expertise Section */}
       <ExpertiseSection />
-
-      {/* Corporate Excellence Section */}
-      <CorporateExcellence />
 
       {/* CTA Section */}
       <CTASection />

@@ -4,12 +4,13 @@ import Link from "next/link";
 export function CTASection() {
   return (
     <section className="relative">
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
-          src="/cta-background.png"
+          src="/cta-team.jpg"
           alt="Legal Team"
           fill
-          className="object-cover brightness-50"
+          className="object-cover brightness-50 object-[center_20%]"
+          priority
         />
       </div>
 
