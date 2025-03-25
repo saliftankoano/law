@@ -4,10 +4,12 @@ export function TestimonialsSection() {
   return (
     <section className="px-16 py-16 bg-stone-100">
       <div className="max-w-4xl mx-auto text-center relative">
-        <h2 className="text-4xl font-bold mb-10">What Our Clients Say</h2>
+        <h2 className="text-black text-4xl font-bold mb-10">
+          What Our Clients Say
+        </h2>
 
         <div className="relative">
-          <div className="text-gray-300 text-8xl absolute -left-12 top-0">
+          <div className="text-black text-8xl absolute -left-12 top-0">
             &quot;
           </div>
 
@@ -31,7 +33,7 @@ export function TestimonialsSection() {
             </div>
           </div>
 
-          <p className="text-xl mb-8">
+          <p className="text-black text-xl mb-8">
             The team made a difficult divorce process much easier. They provided
             clear guidance and fought for a fair custody arrangement. I&apos;m
             grateful for their support and professionalism.
@@ -40,7 +42,7 @@ export function TestimonialsSection() {
           <div className="flex items-center justify-center mb-8">
             <div className="mr-4">
               <Image
-                src="/placeholder.svg?height=50&width=50"
+                src="/testimonial-stacy.jpg"
                 alt="Gwen Stacy"
                 width={50}
                 height={50}
@@ -48,12 +50,12 @@ export function TestimonialsSection() {
               />
             </div>
             <div className="text-left">
-              <p className="font-bold">Gwen Stacy</p>
+              <p className="text-black font-bold">Gwen Stacy</p>
               <p className="text-gray-600 text-sm">New York, USA</p>
             </div>
           </div>
 
-          <div className="text-gray-300 text-8xl absolute -right-12 bottom-20">
+          <div className="text-black text-8xl absolute -right-12 bottom-20">
             &quot;
           </div>
         </div>
