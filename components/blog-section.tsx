@@ -1,5 +1,5 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 export function BlogSection() {
   return (
@@ -7,8 +7,9 @@ export function BlogSection() {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-4">Our Blog</h2>
         <p className="text-gray-700 mb-8 max-w-2xl">
-          Stay updated with key legal trends and expert insights from our attorneys. Explore articles on criminal
-          defense, civil litigation, and more. Check back often for fresh updates.
+          Stay updated with key legal trends and expert insights from our
+          attorneys. Explore articles on criminal defense, civil litigation, and
+          more. Check back often for fresh updates.
         </p>
 
         <div className="mb-10">
@@ -24,14 +25,23 @@ export function BlogSection() {
           {/* Featured Blog Post */}
           <div className="rounded-lg overflow-hidden bg-black">
             <div className="relative h-[400px]">
-              <Image src="/placeholder.svg?height=400&width=1000" alt="Supreme Court" fill className="object-cover" />
+              <Image
+                src="/placeholder.svg?height=400&width=1000"
+                alt="Supreme Court"
+                fill
+                className="object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-8 text-white">
-                <div className="text-sm mb-2">02 December 2024 • Read Time: 5 min</div>
-                <h3 className="text-2xl font-bold mb-2">Supreme Court to Hear Voter ID Law Case</h3>
+                <div className="text-sm mb-2">
+                  02 December 2024 • Read Time: 5 min
+                </div>
+                <h3 className="text-2xl font-bold mb-2">
+                  Supreme Court to Hear Voter ID Law Case
+                </h3>
                 <p className="text-white/80 mb-4 max-w-2xl">
-                  Discover the implications of the upcoming Supreme Court review and its potential impact on voting
-                  rights.
+                  Discover the implications of the upcoming Supreme Court review
+                  and its potential impact on voting rights.
                 </p>
                 <Link
                   href="#"
@@ -56,13 +66,17 @@ export function BlogSection() {
                 />
               </div>
               <div className="col-span-2">
-                <div className="text-sm text-gray-500 mb-2">08 December 2024 • Read Time: 9 min</div>
+                <div className="text-sm text-gray-500 mb-2">
+                  08 December 2024 • Read Time: 9 min
+                </div>
                 <h3 className="text-xl font-bold mb-2">
-                  Department of Justice Launches Crackdown on Healthcare Fraud and Abuse
+                  Department of Justice Launches Crackdown on Healthcare Fraud
+                  and Abuse
                 </h3>
                 <p className="text-gray-700 mb-4">
-                  Learn about the DOJ's latest initiatives targeting healthcare fraud and how they aim to protect
-                  patients and taxpayers.
+                  Learn about the DOJ&apos;s latest initiatives targeting
+                  healthcare fraud and how they aim to protect patients and
+                  taxpayers.
                 </p>
                 <Link
                   href="#"
@@ -86,11 +100,16 @@ export function BlogSection() {
                 />
               </div>
               <div className="col-span-2">
-                <div className="text-sm text-gray-500 mb-2">09 December 2024 • Read Time: 7 min</div>
-                <h3 className="text-xl font-bold mb-2">Supreme Court to Decide on the Fate of DACA</h3>
+                <div className="text-sm text-gray-500 mb-2">
+                  09 December 2024 • Read Time: 7 min
+                </div>
+                <h3 className="text-xl font-bold mb-2">
+                  Supreme Court to Decide on the Fate of DACA
+                </h3>
                 <p className="text-gray-700 mb-4">
-                  Find out how the upcoming decision could affect millions of immigrants and the broader implications
-                  for immigration policy.
+                  Find out how the upcoming decision could affect millions of
+                  immigrants and the broader implications for immigration
+                  policy.
                 </p>
                 <Link
                   href="#"
@@ -104,6 +123,5 @@ export function BlogSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

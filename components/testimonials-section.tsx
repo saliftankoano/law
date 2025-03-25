@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export function TestimonialsSection() {
   return (
@@ -7,7 +7,9 @@ export function TestimonialsSection() {
         <h2 className="text-4xl font-bold mb-10">What Our Clients Say</h2>
 
         <div className="relative">
-          <div className="text-gray-300 text-8xl absolute -left-12 top-0">"</div>
+          <div className="text-gray-300 text-8xl absolute -left-12 top-0">
+            &quot;
+          </div>
 
           <div className="flex justify-center mb-6">
             <div className="flex">
@@ -30,8 +32,9 @@ export function TestimonialsSection() {
           </div>
 
           <p className="text-xl mb-8">
-            The team made a difficult divorce process much easier. They provided clear guidance and fought for a fair
-            custody arrangement. I'm grateful for their support and professionalism.
+            The team made a difficult divorce process much easier. They provided
+            clear guidance and fought for a fair custody arrangement. I&apos;m
+            grateful for their support and professionalism.
           </p>
 
           <div className="flex items-center justify-center mb-8">
@@ -50,7 +53,9 @@ export function TestimonialsSection() {
             </div>
           </div>
 
-          <div className="text-gray-300 text-8xl absolute -right-12 bottom-20">"</div>
+          <div className="text-gray-300 text-8xl absolute -right-12 bottom-20">
+            &quot;
+          </div>
         </div>
 
         <div className="flex justify-center gap-2 mt-8">
@@ -60,6 +65,5 @@ export function TestimonialsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
