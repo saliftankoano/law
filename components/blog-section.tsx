@@ -6,7 +6,7 @@ import { StaggeredAnimation } from "./staggered-animation";
 
 export function BlogSection() {
   return (
-    <section className="px-16 py-16 bg-stone-100">
+    <section className="px-16 py-16 bg-[#1a2e1a]">
       <div className="max-w-6xl mx-auto">
         <StaggeredAnimation
           delay={100}
@@ -15,8 +15,8 @@ export function BlogSection() {
           distance={20}
           preserveLayout={true}
         >
-          <h2 className="text-black text-4xl font-bold mb-4">Our Blog</h2>
-          <p className="text-gray-700 mb-8 max-w-2xl">
+          <h2 className="text-[#e8e3ce] text-4xl font-bold mb-4">Our Blog</h2>
+          <p className="text-[#e8e3ce]/60 mb-8 max-w-2xl">
             Stay informed with insights from our experienced personal injury
             attorneys. Our blog covers accident prevention, legal rights,
             compensation details, and recovery tips.
@@ -38,10 +38,10 @@ export function BlogSection() {
             <div className="rounded-lg overflow-hidden bg-black">
               <div className="relative h-[400px]">
                 <Image
-                  src="/blog-gavel.jpg"
+                  src="/blog-car-accident.jpg"
                   alt="Car Accident Scene"
                   fill
-                  className="object-cover object-bottom"
+                  className="object-cover object-center"
                   // Image should show a car accident scene with emergency responders, creating urgency around personal injury cases
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
@@ -79,10 +79,10 @@ export function BlogSection() {
               <div className="bg-white rounded-lg overflow-hidden shadow">
                 <div className="relative h-48">
                   <Image
-                    src="/medical-malpractice.jpg"
+                    src="/blog-medical.jpg"
                     alt="Medical Chart and Stethoscope"
                     fill
-                    className="object-cover"
+                    className="object-cover object-[center_20%]"
                     // Image should show medical equipment or paperwork, symbolizing medical malpractice issues
                   />
                 </div>
@@ -126,7 +126,7 @@ export function BlogSection() {
               <div className="bg-white rounded-lg overflow-hidden shadow">
                 <div className="relative h-48">
                   <Image
-                    src="/settlement-check.jpg"
+                    src="/blog-check.jpg"
                     alt="Settlement Agreement"
                     fill
                     className="object-cover"
@@ -174,11 +174,10 @@ export function BlogSection() {
               <div className="bg-white rounded-lg overflow-hidden shadow">
                 <div className="relative h-48">
                   <Image
-                    src="/statute-of-limitations.jpg"
+                    src="/blog-injury.jpg"
                     alt="Clock with Legal Documents"
                     fill
                     className="object-cover"
-                    // Image should show a clock or calendar with legal documents, representing time limitations
                   />
                 </div>
                 <div className="p-5">

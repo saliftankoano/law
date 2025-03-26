@@ -60,7 +60,7 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section className="px-16 py-16 bg-stone-100">
+    <section className="px-16 py-16 bg-[#e8e3ce]">
       <div className="max-w-4xl mx-auto text-center relative">
         <StaggeredAnimation delay={100} direction="up" distance={20}>
           <h2 className="text-black text-4xl font-bold mb-10">

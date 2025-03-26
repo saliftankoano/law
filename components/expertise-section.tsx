@@ -80,7 +80,7 @@ export function ExpertiseSection() {
         >
           <div className="p-3 bg-amber-400 rounded-md w-fit mb-4">
             <Image
-              src="/chart-icon.svg"
+              src="/car-accident.svg"
               alt="Car Accident Icon"
               width={24}
               height={24}
@@ -144,8 +144,8 @@ export function ExpertiseSection() {
         >
           <div className="p-3 bg-amber-400 rounded-md w-fit mb-4">
             <Image
-              src="/corporate-icon.svg"
-              alt="Premises Liability Icon"
+              src="/slip-and-fall.svg"
+              alt="Slip and Fall Icon"
               width={24}
               height={24}
               className="w-6 h-6"
@@ -177,7 +177,7 @@ export function ExpertiseSection() {
         >
           <div className="p-3 bg-amber-400 rounded-md w-fit mb-4">
             <Image
-              src="/family-icon.svg"
+              src="/tombstone.svg"
               alt="Wrongful Death Icon"
               width={24}
               height={24}

@@ -4,7 +4,6 @@ import { ContentSection } from "@/components/content-section";
 import { FeaturesSection } from "@/components/features-section";
 import { BlogSection } from "@/components/blog-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
-import { ExpertiseSection } from "@/components/expertise-section";
 import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
@@ -39,11 +38,6 @@ export default function Home() {
       {/* Testimonials Section */}
       <AnimateOnScroll>
         <TestimonialsSection />
-      </AnimateOnScroll>
-
-      {/* Our Expertise Section */}
-      <AnimateOnScroll>
-        <ExpertiseSection />
       </AnimateOnScroll>
 
       {/* CTA Section */}

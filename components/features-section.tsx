@@ -5,7 +5,7 @@ import { StaggeredAnimation } from "./staggered-animation";
 
 export function FeaturesSection() {
   return (
-    <section className="pl-[9.4rem] pb-6 bg-stone-100">
+    <section className="pl-[9.4rem] pb-6 bg-[#e8e3ce]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="space-y-8">
           <StaggeredAnimation
