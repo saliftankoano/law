@@ -5,9 +5,9 @@ import { StaggeredAnimation } from "./staggered-animation";
 
 export function FeaturesSection() {
   return (
-    <section className="pl-[9.4rem] pb-6 bg-[#e8e3ce]">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div className="space-y-8">
+    <section className="px-4 sm:px-8 md:pl-[9.4rem] py-8 sm:py-12 bg-[#e8e3ce]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="space-y-6 sm:space-y-8">
           <StaggeredAnimation
             delay={100}
             staggerDelay={200}
@@ -15,8 +15,8 @@ export function FeaturesSection() {
             distance={25}
             preserveLayout={false}
           >
-            <div className="flex items-start gap-4">
-              <div className="p-3 bg-amber-200 rounded-md">
+            <div className="flex flex-col sm:flex-row items-start gap-4">
+              <div className="p-3 bg-amber-200 rounded-md shrink-0">
                 <Image
                   src="/trophy-icon.svg"
                   alt="Trophy Icon"
@@ -26,16 +26,18 @@ export function FeaturesSection() {
                 />
               </div>
               <div className="text-black">
-                <h3 className="text-xl font-bold mb-2">Millions Recovered</h3>
-                <p className="text-gray-700">
+                <h3 className="text-lg sm:text-xl font-bold mb-2">
+                  Millions Recovered
+                </h3>
+                <p className="text-sm sm:text-base text-gray-700">
                   Our attorneys have successfully recovered millions of dollars
                   in compensation for injured clients across countless cases.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-4 mt-8">
-              <div className="p-3 bg-amber-200 rounded-md">
+            <div className="flex flex-col sm:flex-row items-start gap-4">
+              <div className="p-3 bg-amber-200 rounded-md shrink-0">
                 <Image
                   src="/hourglass-icon.svg"
                   alt="Hourglass Icon"
@@ -45,8 +47,10 @@ export function FeaturesSection() {
                 />
               </div>
               <div className="text-black">
-                <h3 className="text-xl font-bold mb-2">No Fee Unless We Win</h3>
-                <p className="text-gray-700">
+                <h3 className="text-lg sm:text-xl font-bold mb-2">
+                  No Fee Unless We Win
+                </h3>
+                <p className="text-sm sm:text-base text-gray-700">
                   We work on a contingency fee basis – you pay nothing unless we
                   secure compensation for your injuries.
                 </p>

@@ -18,7 +18,7 @@ export function HeroSection() {
           fill
           className="object-cover brightness-40"
           priority
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
         />
       </div>
 
@@ -31,21 +31,27 @@ export function HeroSection() {
             direction="up"
             distance={20}
           >
-            <h1 className="text-6xl font-bold text-white leading-tight mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-8">
               Fighting For The Compensation You Deserve
             </h1>
 
-            <p className="text-white/90 text-xl mb-10 max-w-2xl">
+            <p className="text-white/90 text-base sm:text-lg md:text-xl mb-6 sm:mb-10 max-w-2xl">
               Experienced personal injury attorneys helping accident victims
               recover maximum compensation for their injuries and suffering.
             </p>
 
-            <div>
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="#"
-                className="inline-block px-8 py-4 bg-amber-500 text-black font-medium rounded-md hover:bg-amber-600 transition-colors text-lg"
+                className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-amber-500 text-black font-medium rounded-md hover:bg-amber-600 transition-colors text-base sm:text-lg text-center"
               >
                 Free Case Evaluation
+              </Link>
+              <Link
+                href="/about"
+                className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-white text-white font-medium rounded-md hover:bg-white/10 transition-colors text-base sm:text-lg text-center"
+              >
+                Learn More
               </Link>
             </div>
           </StaggeredAnimation>
