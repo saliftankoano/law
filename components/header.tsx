@@ -15,8 +15,11 @@ export function Header() {
   return (
     <header className="absolute w-full top-0 left-0 z-50 flex items-center justify-between px-4 sm:px-6 lg:px-16 py-6 bg-gradient-to-b from-black/50 to-transparent">
       <div
-        className="text-xl sm:text-2xl font-bold text-amber-500 opacity-0 animate-fade-in"
+        className="hover:cursor-pointer text-xl sm:text-2xl font-bold text-amber-500 opacity-0 animate-fade-in"
         style={{ animationDelay: "250ms", animationFillMode: "forwards" }}
+        onClick={() => {
+          window.location.href = "/";
+        }}
       >
         Davoli & Associates
       </div>
