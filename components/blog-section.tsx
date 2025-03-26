@@ -24,7 +24,7 @@ export function BlogSection() {
 
           <div className="mb-10">
             <Link
-              href="#"
+              href="/blog"
               className="inline-block px-6 py-3 bg-amber-400 text-black font-medium rounded-md hover:bg-amber-500 transition-colors"
             >
               Browse All Articles
