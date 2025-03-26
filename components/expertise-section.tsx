@@ -47,11 +47,11 @@ export function ExpertiseSection() {
         distance={20}
         preserveLayout={true}
       >
-        <h2 className="text-4xl font-bold mb-6">Our Expertise</h2>
+        <h2 className="text-4xl font-bold mb-6">Practice Areas</h2>
         <p className="max-w-2xl mb-8">
-          Discover a diverse range of legal services designed to protect your
-          interests. From family matters to corporate solutions, we&apos;ve got
-          you covered.
+          At Davoli & Associates, we focus exclusively on personal injury cases,
+          allowing us to provide specialized representation for victims of
+          negligence and misconduct.
         </p>
 
         <div className="flex justify-start mb-12">
@@ -59,7 +59,7 @@ export function ExpertiseSection() {
             href="#"
             className="px-6 py-2 border border-white/30 rounded-md hover:bg-white/10 transition-colors"
           >
-            View All
+            View All Practice Areas
           </Link>
         </div>
       </StaggeredAnimation>
@@ -81,16 +81,16 @@ export function ExpertiseSection() {
           <div className="p-3 bg-amber-400 rounded-md w-fit mb-4">
             <Image
               src="/chart-icon.svg"
-              alt="Business Icon"
+              alt="Car Accident Icon"
               width={24}
               height={24}
               className="w-6 h-6"
             />
           </div>
-          <h3 className="text-xl font-bold mb-3">Business Law</h3>
+          <h3 className="text-xl font-bold mb-3">Auto Accidents</h3>
           <p className="text-white/80 mb-6 text-sm">
-            Providing tailored legal solutions for businesses of all sizes.
-            Navigate contracts, compliance, and disputes with confidence.
+            Comprehensive representation for victims of car, truck, motorcycle,
+            and rideshare accidents, fighting for full compensation.
           </p>
           <Link
             href="#"
@@ -113,16 +113,16 @@ export function ExpertiseSection() {
           <div className="p-3 bg-amber-400 rounded-md w-fit mb-4">
             <Image
               src="/healthcare-icon.svg"
-              alt="Healthcare Icon"
+              alt="Medical Malpractice Icon"
               width={24}
               height={24}
               className="w-6 h-6"
             />
           </div>
-          <h3 className="text-xl font-bold mb-3">Healthcare Law</h3>
+          <h3 className="text-xl font-bold mb-3">Medical Malpractice</h3>
           <p className="text-white/80 mb-6 text-sm">
-            Specialized support for healthcare professionals and facilities.
-            Ensure compliance and resolve medical-legal challenges effectively.
+            Holding healthcare professionals accountable for errors,
+            misdiagnosis, surgical mistakes, and improper treatment.
           </p>
           <Link
             href="#"
@@ -145,16 +145,17 @@ export function ExpertiseSection() {
           <div className="p-3 bg-amber-400 rounded-md w-fit mb-4">
             <Image
               src="/corporate-icon.svg"
-              alt="Corporate Icon"
+              alt="Premises Liability Icon"
               width={24}
               height={24}
               className="w-6 h-6"
             />
           </div>
-          <h3 className="text-xl font-bold mb-3">Corporate Law</h3>
+          <h3 className="text-xl font-bold mb-3">Premises Liability</h3>
           <p className="text-white/80 mb-6 text-sm">
-            Comprehensive legal services for corporate operations and growth.
-            Stay compliant and protect your organization&apos;s interests.
+            Representing clients injured due to unsafe property conditions,
+            including slip and falls, inadequate security, and hazardous
+            environments.
           </p>
           <Link
             href="#"
@@ -177,16 +178,16 @@ export function ExpertiseSection() {
           <div className="p-3 bg-amber-400 rounded-md w-fit mb-4">
             <Image
               src="/family-icon.svg"
-              alt="Family Icon"
+              alt="Wrongful Death Icon"
               width={24}
               height={24}
               className="w-6 h-6"
             />
           </div>
-          <h3 className="text-xl font-bold mb-3">Family Law</h3>
+          <h3 className="text-xl font-bold mb-3">Wrongful Death</h3>
           <p className="text-white/80 mb-6 text-sm">
-            Empathetic guidance for family legal issues like custody and
-            divorce. Achieve resolutions that prioritize harmony and fairness.
+            Compassionate support for families who have lost loved ones due to
+            negligence, seeking justice and financial security for survivors.
           </p>
           <Link
             href="#"

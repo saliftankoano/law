@@ -1,15 +1,70 @@
 "use client";
 
-import Image from "next/image";
 import { StaggeredAnimation } from "./staggered-animation";
+import { useState, useEffect, useCallback } from "react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
+// Define testimonial data
+const testimonials = [
+  {
+    id: 1,
+    quote:
+      "After my car accident, I was overwhelmed with medical bills and unable to work. Davoli & Associates fought for me and secured a settlement that covered all my expenses plus compensation for my pain and suffering. They were compassionate and professional every step of the way.",
+    name: "Maria Rodriguez",
+    title: "Car Accident Victim",
+    image: "/testimonial-client1.jpg",
+    alt: "Maria Rodriguez",
+    initials: "MR",
+  },
+  {
+    id: 2,
+    quote:
+      "The team at Davoli & Associates secured three times what the insurance company initially offered for my workplace injury. I couldn't be more grateful for their expertise and dedication to my case.",
+    name: "James Wilson",
+    title: "Workplace Injury Case",
+    image: "/testimonial-client2.jpg",
+    alt: "James Wilson",
+    initials: "JW",
+  },
+  {
+    id: 3,
+    quote:
+      "After my slip and fall in a grocery store, Davoli & Associates handled everything while I focused on recovery. Their expertise made all the difference in the outcome of my case.",
+    name: "Sarah Johnson",
+    title: "Premises Liability Case",
+    image: "/testimonial-client3.jpg",
+    alt: "Sarah Johnson",
+    initials: "SJ",
+  },
+];
 
 export function TestimonialsSection() {
+  const [current, setCurrent] = useState(0);
+
+  const nextSlide = useCallback(() => {
+    setCurrent(current === testimonials.length - 1 ? 0 : current + 1);
+  }, [current]);
+
+  // Auto-loop functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000); // Change testimonial every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [nextSlide]);
+
+  // Manual navigation
+  const goToSlide = (index: number) => {
+    setCurrent(index);
+  };
+
   return (
     <section className="px-16 py-16 bg-stone-100">
       <div className="max-w-4xl mx-auto text-center relative">
         <StaggeredAnimation delay={100} direction="up" distance={20}>
           <h2 className="text-black text-4xl font-bold mb-10">
-            What Our Clients Say
+            Client Success Stories
           </h2>
         </StaggeredAnimation>
 
@@ -20,8 +75,11 @@ export function TestimonialsSection() {
           threshold={0.2}
         >
           <div className="relative">
-            <div className="text-black text-8xl absolute -left-12 top-0">
-              &quot;
+            <div
+              className="text-black text-8xl absolute -left-12 top-0 font-serif font-bold"
+              style={{ fontFamily: "Georgia, serif" }}
+            >
+              &ldquo;
             </div>
 
             <div className="flex justify-center mb-6">
@@ -44,39 +102,61 @@ export function TestimonialsSection() {
               </div>
             </div>
 
-            <p className="text-black text-xl mb-8">
-              The team made a difficult divorce process much easier. They
-              provided clear guidance and fought for a fair custody arrangement.
-              I&apos;m grateful for their support and professionalism.
-            </p>
+            <div className="h-[320px] relative overflow-hidden mb-8">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={testimonial.id}
+                  className={`absolute top-0 left-0 right-0 w-full h-full transition-all duration-1000 ease-in-out transform
+                    ${
+                      index === current
+                        ? "opacity-100 translate-x-0 z-10"
+                        : index < current
+                        ? "opacity-0 -translate-x-8 z-0"
+                        : "opacity-0 translate-x-8 z-0"
+                    }`}
+                >
+                  <div className="h-full flex flex-col justify-between">
+                    <p className="text-black text-xl">{testimonial.quote}</p>
 
-            <div className="flex items-center justify-center mb-8">
-              <div className="mr-4">
-                <Image
-                  src="/testimonial-stacy.jpg"
-                  alt="Gwen Stacy"
-                  width={50}
-                  height={50}
-                  className="rounded-full"
-                />
-              </div>
-              <div className="text-left">
-                <p className="text-black font-bold">Gwen Stacy</p>
-                <p className="text-gray-600 text-sm">New York, USA</p>
-              </div>
-            </div>
-
-            <div className="text-black text-8xl absolute -right-12 bottom-20">
-              &quot;
+                    <div className="flex flex-col items-center justify-center mt-8">
+                      <Avatar className="h-24 w-24 mb-4 border-2 border-amber-500 flex items-center justify-center">
+                        <AvatarImage
+                          src={testimonial.image}
+                          alt={testimonial.alt}
+                          className="object-center"
+                        />
+                        <AvatarFallback className="bg-amber-100 text-amber-800 text-xl font-medium">
+                          {testimonial.initials}
+                        </AvatarFallback>
+                      </Avatar>
+                      <div className="text-center">
+                        <p className="text-black font-bold text-lg">
+                          {testimonial.name}
+                        </p>
+                        <p className="text-gray-600">{testimonial.title}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </StaggeredAnimation>
 
         <StaggeredAnimation delay={500} direction="up" distance={15}>
           <div className="flex justify-center gap-2 mt-8">
-            <div className="w-6 h-2 bg-amber-500 rounded-full"></div>
-            <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-            <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`transition-all duration-300 rounded-full ${
+                  index === current
+                    ? "w-6 h-2 bg-amber-500"
+                    : "w-2 h-2 bg-gray-300 hover:bg-gray-400"
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
           </div>
         </StaggeredAnimation>
       </div>

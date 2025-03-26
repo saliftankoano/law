@@ -53,18 +53,16 @@ export function ServiceCards() {
       >
         <Image
           src="/litigate.jpg"
-          alt="Commercial Litigation"
+          alt="Auto Accidents"
           width={400}
           height={300}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/60 p-5 flex flex-col justify-end">
-          <h3 className="text-lg font-bold text-white mb-2">
-            Commercial Litigation
-          </h3>
+          <h3 className="text-lg font-bold text-white mb-2">Auto Accidents</h3>
           <p className="text-white/80 text-sm line-clamp-2">
-            Ultrices massa felis dolor imperdiet penatibus magna volutpat dis
-            etiam condimentum feugiat habitant nunc
+            We fight aggressively for victims of car, truck, and motorcycle
+            accidents to secure the compensation needed for recovery.
           </p>
         </div>
       </div>
@@ -81,18 +79,18 @@ export function ServiceCards() {
       >
         <Image
           src="/justice-table.jpg"
-          alt="Strategic Information"
+          alt="Slip and Fall Accidents"
           width={400}
           height={300}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/60 p-5 flex flex-col justify-end">
           <h3 className="text-lg font-bold text-white mb-2">
-            Strategic Information
+            Slip and Fall Accidents
           </h3>
           <p className="text-white/80 text-sm line-clamp-2">
-            Eros a ex sit penatibus cras odio ullamcorper penatibus bibendum
-            aptent lectus laboris bibendum per
+            When property owners neglect safety, we help injured victims prove
+            negligence and recover damages for their injuries.
           </p>
         </div>
       </div>

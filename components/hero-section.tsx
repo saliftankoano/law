@@ -14,7 +14,7 @@ export function HeroSection() {
       >
         <Image
           src="/hero.jpg"
-          alt="Legal Team"
+          alt="Personal Injury Attorneys"
           fill
           className="object-cover brightness-40"
           priority
@@ -32,12 +32,12 @@ export function HeroSection() {
             distance={20}
           >
             <h1 className="text-6xl font-bold text-white leading-tight mb-8">
-              Your Trusted Legal Partners for Every Step of the Way
+              Fighting For The Compensation You Deserve
             </h1>
 
             <p className="text-white/90 text-xl mb-10 max-w-2xl">
-              Offering tailored legal solutions to meet your unique needs, with
-              professionalism and care at every step.
+              Experienced personal injury attorneys helping accident victims
+              recover maximum compensation for their injuries and suffering.
             </p>
 
             <div>
@@ -45,7 +45,7 @@ export function HeroSection() {
                 href="#"
                 className="inline-block px-8 py-4 bg-amber-500 text-black font-medium rounded-md hover:bg-amber-600 transition-colors text-lg"
               >
-                Learn More
+                Free Case Evaluation
               </Link>
             </div>
           </StaggeredAnimation>

@@ -5,7 +5,7 @@ import { StaggeredAnimation } from "./staggered-animation";
 
 export function FeaturesSection() {
   return (
-    <section className="px-16 py-6 bg-stone-100">
+    <section className="pl-[9.4rem] pb-6 bg-stone-100">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="space-y-8">
           <StaggeredAnimation
@@ -26,15 +26,15 @@ export function FeaturesSection() {
                 />
               </div>
               <div className="text-black">
-                <h3 className="text-xl font-bold mb-2">Proven Track Record</h3>
+                <h3 className="text-xl font-bold mb-2">Millions Recovered</h3>
                 <p className="text-gray-700">
-                  Our history of successful cases demonstrates our expertise and
-                  commitment to excellence
+                  Our attorneys have successfully recovered millions of dollars
+                  in compensation for injured clients across countless cases.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-4 mt-8">
               <div className="p-3 bg-amber-200 rounded-md">
                 <Image
                   src="/hourglass-icon.svg"
@@ -45,12 +45,10 @@ export function FeaturesSection() {
                 />
               </div>
               <div className="text-black">
-                <h3 className="text-xl font-bold mb-2">
-                  24/7 Support Availability
-                </h3>
+                <h3 className="text-xl font-bold mb-2">No Fee Unless We Win</h3>
                 <p className="text-gray-700">
-                  We&apos;re always here to assist, offering round-the-clock
-                  support for your legal needs.
+                  We work on a contingency fee basis – you pay nothing unless we
+                  secure compensation for your injuries.
                 </p>
               </div>
             </div>
@@ -61,10 +59,11 @@ export function FeaturesSection() {
           <StaggeredAnimation delay={300} direction="right" distance={40}>
             <Image
               src="/lady-justice.png"
-              alt="Lady Justice Statue"
+              alt="Attorney With Client"
               width={600}
               height={900}
               className="object-cover"
+              // Image should show a compassionate attorney helping an injured client, possibly reviewing documents together
             />
           </StaggeredAnimation>
         </div>

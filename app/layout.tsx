@@ -7,7 +7,7 @@ import { PreventFlash } from "@/components/prevent-flash";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Lawvare - Your Trusted Legal Partners",
+  title: "Davoli & Associates",
   description: "Offering tailored legal solutions to meet your unique needs",
 };
 

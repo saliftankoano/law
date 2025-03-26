@@ -9,7 +9,7 @@ export function Header() {
   const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setIsVisible(true); // Auto trigger on mount since this is header
+    setIsVisible(true);
   }, []);
 
   return (
@@ -18,7 +18,7 @@ export function Header() {
         className="text-2xl font-bold text-amber-500 opacity-0 animate-fade-in"
         style={{ animationDelay: "250ms", animationFillMode: "forwards" }}
       >
-        Lawvare
+        Davoli & Associates
       </div>
 
       <nav className="flex items-center space-x-8" ref={navRef}>
@@ -59,7 +59,7 @@ export function Header() {
             transitionDelay: "600ms",
           }}
         >
-          Case
+          Practice Areas
         </Link>
         <div
           className="relative group"
@@ -72,7 +72,7 @@ export function Header() {
           }}
         >
           <button className="flex items-center text-white/90 hover:text-amber-500 transition-colors">
-            Page <ChevronDown className="ml-1 w-4 h-4" />
+            Resources <ChevronDown className="ml-1 w-4 h-4" />
           </button>
         </div>
       </nav>
@@ -85,7 +85,7 @@ export function Header() {
           href="#"
           className="px-6 py-2.5 bg-amber-500 text-black font-medium rounded-md hover:bg-amber-600 transition-colors"
         >
-          Get in Touch
+          Free Consultation
         </Link>
       </div>
     </header>

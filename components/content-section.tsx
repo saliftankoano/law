@@ -17,19 +17,19 @@ export function ContentSection() {
             distance={20}
           >
             <h2 className="text-3xl font-bold text-black mb-6">
-              Protecting Rights with Integrity and Expertise
+              Advocating For Injury Victims With Compassion And Determination
             </h2>
             <p className="text-gray-700 mb-6">
-              Lawvare delivers trusted legal solutions with integrity and
-              excellence. We empower clients by safeguarding their rights and
-              providing expert guidance.
+              Davoli & Associates fights tirelessly for personal injury victims.
+              Our experienced attorneys have recovered millions in compensation
+              for our clients, providing personalized attention to every case.
             </p>
             <div className="mb-8">
               <Link
                 href="#"
                 className="inline-block px-6 py-3 bg-amber-500 text-black font-medium rounded-md hover:bg-amber-600 transition-colors"
               >
-                Learn More
+                Our Approach
               </Link>
             </div>
           </StaggeredAnimation>
@@ -45,15 +45,16 @@ export function ContentSection() {
             <div className="aspect-[4/3] relative">
               <Image
                 src="/protect.jpg"
-                alt="Legal Professionals"
+                alt="Attorney Consulting with Client"
                 fill
                 className="object-cover rounded-md"
+                // Image should show a compassionate attorney consulting with an injured client, conveying care and professionalism
               />
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-white flex items-center justify-center">
                 <div className="relative w-full h-full rounded-full flex items-center justify-center">
                   <div className="absolute inset-0 rounded-full flex items-center justify-center">
                     <div className="text-[8px] text-center text-gray-700 rotate-[30deg]">
-                      Partners Lawvare Your Trusted Legal
+                      Davoli & Associates Your Advocates
                     </div>
                   </div>
                   <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
@@ -73,10 +74,8 @@ export function ContentSection() {
               >
                 <div className="mb-4">
                   <div className="flex justify-between mb-1">
-                    <span className="font-medium">
-                      Corporate Law Specialist
-                    </span>
-                    <span>90%</span>
+                    <span className="font-medium">Car Accident Claims</span>
+                    <span>95%</span>
                   </div>
                   <div className="w-full bg-gray-200 h-1">
                     <div className="bg-black h-1 animate-progress-90"></div>
@@ -85,8 +84,8 @@ export function ContentSection() {
 
                 <div className="mb-4">
                   <div className="flex justify-between mb-1">
-                    <span className="font-medium">Case Management</span>
-                    <span>80%</span>
+                    <span className="font-medium">Premises Liability</span>
+                    <span>85%</span>
                   </div>
                   <div className="w-full bg-gray-200 h-1">
                     <div className="bg-black h-1 animate-progress-80"></div>
@@ -95,10 +94,8 @@ export function ContentSection() {
 
                 <div className="mb-4">
                   <div className="flex justify-between mb-1">
-                    <span className="font-medium">
-                      Recharge & Analytics Skill
-                    </span>
-                    <span>75%</span>
+                    <span className="font-medium">Medical Malpractice</span>
+                    <span>80%</span>
                   </div>
                   <div className="w-full bg-gray-200 h-1">
                     <div className="bg-black h-1 animate-progress-75"></div>
