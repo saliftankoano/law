@@ -38,20 +38,8 @@ export function ContentSection() {
                 src="/protect.jpg"
                 alt="Attorney Consulting with Client"
                 fill
-                className="object-cover"
+                className="object-cover hover:scale-105 transition-all duration-300"
               />
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-white flex items-center justify-center shadow-md">
-                <div className="relative w-full h-full rounded-full flex items-center justify-center">
-                  <div className="absolute inset-0 rounded-full flex items-center justify-center">
-                    <div className="text-[8px] text-center text-gray-700 rotate-[30deg]">
-                      Davoli & Associates Your Advocates
-                    </div>
-                  </div>
-                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                    <div className="w-0 h-0 border-t-[6px] border-t-transparent border-l-[10px] border-l-black border-b-[6px] border-b-transparent ml-1"></div>
-                  </div>
-                </div>
-              </div>
             </div>
           </StaggeredAnimation>
         </div>
@@ -67,36 +55,30 @@ export function ContentSection() {
             <h3 className="text-2xl font-bold mb-6">Our Success Metrics</h3>
             <div className="mb-4">
               <div className="flex justify-between mb-1">
-                <span className="font-medium">
-                  Car Accident Settlement Rate
-                </span>
+                <span className="font-medium">Car Accident</span>
                 <span>95%</span>
               </div>
-              <div className="w-full bg-gray-200 h-1">
+              <div className="w-full bg-white h-1">
                 <div className="bg-black h-1 animate-progress-90"></div>
               </div>
             </div>
 
             <div className="mb-4">
               <div className="flex justify-between mb-1">
-                <span className="font-medium">
-                  Premises Liability Recovery Rate
-                </span>
+                <span className="font-medium">Premises Liability</span>
                 <span>85%</span>
               </div>
-              <div className="w-full bg-gray-200 h-1">
+              <div className="w-full bg-white h-1">
                 <div className="bg-black h-1 animate-progress-80"></div>
               </div>
             </div>
 
             <div className="mb-8">
               <div className="flex justify-between mb-1">
-                <span className="font-medium">
-                  Medical Malpractice Client Satisfaction
-                </span>
+                <span className="font-medium">Medical Malpractice</span>
                 <span>80%</span>
               </div>
-              <div className="w-full bg-gray-200 h-1">
+              <div className="w-full bg-white h-1">
                 <div className="bg-black h-1 animate-progress-75"></div>
               </div>
             </div>
