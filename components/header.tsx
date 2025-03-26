@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 
 export function Header() {
@@ -23,7 +22,7 @@ export function Header() {
 
       <nav className="flex items-center space-x-8" ref={navRef}>
         <Link
-          href="#"
+          href="/"
           className="text-white/90 hover:text-amber-500 transition-colors"
           style={{
             opacity: isVisible ? 1 : 0,
@@ -36,7 +35,7 @@ export function Header() {
           Home
         </Link>
         <Link
-          href="#"
+          href="/about"
           className="text-white/90 hover:text-amber-500 transition-colors"
           style={{
             opacity: isVisible ? 1 : 0,
@@ -49,7 +48,7 @@ export function Header() {
           About Us
         </Link>
         <Link
-          href="#"
+          href="/expertise"
           className="text-white/90 hover:text-amber-500 transition-colors"
           style={{
             opacity: isVisible ? 1 : 0,
@@ -61,8 +60,9 @@ export function Header() {
         >
           Practice Areas
         </Link>
-        <div
-          className="relative group"
+        <Link
+          href="/blog"
+          className="text-white/90 hover:text-amber-500 transition-colors"
           style={{
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? "none" : "translateY(-12px)",
@@ -71,10 +71,8 @@ export function Header() {
             transitionDelay: "700ms",
           }}
         >
-          <button className="flex items-center text-white/90 hover:text-amber-500 transition-colors">
-            Resources <ChevronDown className="ml-1 w-4 h-4" />
-          </button>
-        </div>
+          Blog
+        </Link>
       </nav>
 
       <div
@@ -82,7 +80,7 @@ export function Header() {
         style={{ animationDelay: "800ms", animationFillMode: "forwards" }}
       >
         <Link
-          href="#"
+          href="/contact"
           className="px-6 py-2.5 bg-amber-500 text-black font-medium rounded-md hover:bg-amber-600 transition-colors"
         >
           Free Consultation
