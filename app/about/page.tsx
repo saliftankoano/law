@@ -63,11 +63,12 @@ export default function AboutPage() {
                 needed a strong voice to advocate for their rights.
               </p>
               <p className="text-lg text-gray-700">
-                After graduating with honors from law school, Henry quickly made
-                his mark in the legal community. His commitment to excellence
-                and unwavering dedication to his clients has resulted in
-                numerous successful verdicts and settlements, earning him
-                recognition from both peers and clients alike.
+                After graduating with honors from University and from Hofstra
+                University School of Law, Henry quickly made his mark in the
+                legal community. His commitment to excellence and unwavering
+                dedication to his clients has resulted in numerous successful
+                verdicts and settlements, earning him recognition from both
+                peers and clients alike.
               </p>
               <div className="pt-6">
                 <h3 className="text-xl font-semibold text-[#1a2e1a] mb-4">
