@@ -15,7 +15,7 @@ export default function AboutPage() {
       <div className="relative bg-[#1a2e1a] text-white">
         <div className="absolute inset-0">
           <Image
-            src="/law-office.jpg"
+            src="/about-cover.jpg"
             alt="Law Office"
             fill
             className="object-cover opacity-20"
@@ -41,7 +41,7 @@ export default function AboutPage() {
           <AnimateOnScroll>
             <div className="relative h-[600px] rounded-lg overflow-hidden">
               <Image
-                src="/henry-davoli.jpg"
+                src="/about.jpg"
                 alt="Henry W. Davoli, Jr."
                 fill
                 className="object-cover"
@@ -56,8 +56,8 @@ export default function AboutPage() {
                 Henry W. Davoli, Jr.
               </h2>
               <p className="text-lg text-gray-700">
-                With over three decades of experience in personal injury law,
-                Henry W. Davoli, Jr. has established himself as one of the most
+                With over 15 years of experience in personal injury law, Henry
+                W. Davoli, Jr. has established himself as one of the most
                 respected attorneys in the field. His journey in law began with
                 a deep-seated desire to help those who had been wronged and
                 needed a strong voice to advocate for their rights.
